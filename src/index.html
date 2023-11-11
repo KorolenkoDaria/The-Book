@@ -4,12 +4,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" rel="stylesheet"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css" />
   <title>The Book</title>
 
 </head>
 
 <body>
+  <header class="header-studio ">
+    <div class="container header-container">
+      <div class="header-logo">
+        <a href="./index.html" class="link">
+          <svg class="header-logo-icon header-logo-light" width="109" height="28">
+            <use href="./images/icons/symbol-defs.svg#icon-logo-on-light-bg"></use>
+          </svg>
+          <svg class="header-logo-icon header-logo-dark" width="109" height="28">
+            <use href="./images/icons/symbol-defs.svg#icon-logo-on-dark-bg"></use>
+          </svg>
+        </a>
+      </div>
+      <nav class="header-menu">
+        <ul class="header-menu-list">
+          <li class="header-menu-list-item">
+            <a href="./index.html" class="link header-menu-link ">Home</a>
+          </li>
+          <li class="header-menu-list-item header-item-shopping_list">
+            <a href="#" class="link header-menu-link header-active">
+              <span>Shopping list</span>
+              <svg class="header-cart-svg" width="20" height="20">
+                <use href="./images/icons/symbol-defs.svg#icon-dark_cart"></use>
+              </svg></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-toggle-bg  js-toggle-bg">
+        <div class="header-toggle-circle"></div>
+      </div>
 
+
+      <div class="header-burger-menu js-open-menu toggle-position">
+        <svg class="header-burger-icon" width="28" height="28">
+          <use href="./images/icons/symbol-defs.svg#icon-menu-burger"></use>
+        </svg>
+      </div>
+      <div class="modal-close-icon js-close-menu toggle-position is-hidden">
+        <svg width="28" height="28">
+          <use href="./images/icons/symbol-defs.svg#icon-x-close"></use>
+        </svg>
+      </div>
+
+
+      <!-----------------SIGN UP---------------->
+
+
+      <!-------------------------------------------->
+
+      <!---------------------- authorized user -------------------->
+      <div class="header-user-container">
+        <div class="header-user-authorized">
+          <img src="./images/users-foto@1x.png" alt="user-foto" srcset="./images/users-foto@2x.png 2x,
+          ./images/users-foto@1x.png 1x
+          " width="37" height="37">
+          <p>Stephen</p>
+          <svg width="23" height="26">
+            <use href="./images/icons/symbol-defs.svg#icon-arrow-down"></use>
+          </svg>
+        </div>
+        <div class="header-user-log_out">
+          <p>Log out</p>
+          <svg width="20" height="20">
+            <use href="./images/icons/symbol-defs.svg#icon-arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!---------------- MODAL WINDOW ----------------------->
+    <div class="modal-wrapper js-menu-container is-hidden" id="mobile-menu">
+      <div class="container modal-picture">
+
+        <div class="modal-main">
+          <div class="modal-user">
+            <img src="./images/users-foto@1x.png" alt="user-foto" srcset="./images/users-foto@2x.png 2x,
+                  ./images/users-foto@1x.png 1x
+                  " width="37" height="37">
+            <p>Stephen</p>
+          </div>
+
+          <nav class="modal-menu">
+            <ul class="modal-menu-list">
+              <li class="modal-menu-list-item">
+                <a href="./index.html" class="link modal-menu-link modal-menu-home header-active">Home</a>
+              </li>
+              <li class="modal-menu-list-item">
+                <a href="#" class="link modal-menu-link modal-menu-shopping">
+                  <span>Shopping list</span>
+                  <svg class="modal-cart" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-light_cart"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="modal-user-log_out">
+            <p>Log out</p>
+            <svg width="20" height="20">
+              <use href="./images/icons/symbol-defs.svg#icon-arrow-right"></use>
+            </svg>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <div class="header-user-block" data-modal-open>
+    <p>Sign up</p>
+    <svg width="20" height="20">
+      <use href="./images/icons/symbol-defs.svg#icon-arrow-right"></use>
+    </svg>
+  </div>
+  <!----------------------------- FORM------------------------ -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="form-wrapper">
+      <form class="form" autocomplete="off">
+        <div class="form-close" type="button" data-modal-close>
+          <svg class="form-close-icon" width="20" height="20">
+            <use href="./images/icons/symbol-defs.svg#icon-x-close"></use>
+          </svg>
+        </div>
+        <div class="form-field">
+          <input id="name" type="text" class="form-input" name="name" placeholder="Name"
+            pattern="[a-zA-Z\u0400-\u04ff]{3,30}" required="">
+          <label for="name" class="form-label"></label>
+        </div>
+        <div class="form-field">
+          <input id="mail" type="email" class="form-input" name="mail" placeholder="Email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="">
+          <label for="mail" class="form-label"></label>
+          <svg class="form-icon" width="28" height="28">
+            <use href="./images/icons/symbol-defs.svg#icon-mail-02"></use>
+          </svg>
+        </div>
+        <div class="form-field">
+          <input id="password" type="password" class="form-input" name="password" required="" placeholder="Password">
+          <label for="password" class="form-label"></label>
+          <svg class="form-icon" width="28" height="28">
+            <use href="./images/icons/symbol-defs.svg#icon-lock-02"></use>
+          </svg>
+        </div>
+        <button type="submit" class="form-submit-btn">Sign up</button>
+
+        <div class="form-btns-group">
+          <button type="button" class="form-btn-sign-up form-btns">Sign up</button>
+          <button type="button" class="form-btn-sign-in form-btns">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>

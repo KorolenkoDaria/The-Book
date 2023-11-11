@@ -1,0 +1,10 @@
+:root {
+    --dark-bg: #202024;
+    --white-bg: #F6F5EF;
+    --accent-yellow: #EAC645;
+    --dark-bg-elements: #111;
+    --violet: #4F2EE8;
+    --linear-green: linear-gradient(107deg, #BEC7C2 0%, #A1B5BA 100%);
+    --color-txt-main: rgba(17, 17, 17, 0.60);
+    --color-txt-accent: #B4AFAF;
+  }
